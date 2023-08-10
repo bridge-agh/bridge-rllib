@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "bridge-rllib"
+version = "0.1.0"
+description = ""
+authors = ["Jakub Karbowski <carbon225@proton.me>"]
+readme = "README.md"
+packages = [{include = "bridge_rllib"}]
+
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+tensorflow = "^2.13.0"
+ray = {extras = ["default", "rllib"], version = "^2.6.2"}
+bridge-core-py = {git = "https://github.com/bridge-agh/bridge-core-py.git"}
+wandb = "^0.15.8"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.284"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
